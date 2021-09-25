@@ -1,0 +1,243 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a simple API for Kema Post Put Patch and Delete",
+    "version" : "1.0.1",
+    "title" : "Simple  Post Put Patch and Delete API",
+    "contact" : {
+      "email" : "kema@gmail.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags" : [ {
+    "name" : "Student",
+    "description" : "Post Put Patch and Delete call for student"
+  } ],
+  "paths" : {
+    "/studentD" : {
+      "delete" : {
+        "tags" : [ "DeleteStudent" ],
+        "summary" : "Delete record",
+        "description" : "Deleted item from record",
+        "operationId" : "DeleteStudent",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "name",
+          "description" : "Student item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/name"
+          }
+        }, {
+          "in" : "body",
+          "name" : "rollId",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/rollId"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Item deleted succesfully"
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          },
+          "403" : {
+            "description" : "Please check your request payload and network connection"
+          }
+        }
+      }
+    },
+    "/studentP" : {
+      "put" : {
+        "tags" : [ "PutStudentName" ],
+        "summary" : "Update a student name in record",
+        "description" : "Updated a selective attribute in an item to the system",
+        "operationId" : "PutStudentName",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "name",
+          "description" : "Student item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/name"
+          }
+        }, {
+          "in" : "body",
+          "name" : "rollId",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/rollId"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "item updated"
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          },
+          "403" : {
+            "description" : "Please check your request payload and network connection"
+          }
+        }
+      }
+    },
+    "/studentU" : {
+      "patch" : {
+        "tags" : [ "UpdateStudent" ],
+        "summary" : "Update a student record",
+        "description" : "Updated an item to the system",
+        "operationId" : "UpdateStudent",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "name",
+          "description" : "Student item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/name"
+          }
+        }, {
+          "in" : "body",
+          "name" : "title",
+          "description" : "Student Title to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/title"
+          }
+        }, {
+          "in" : "body",
+          "name" : "className",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/className"
+          }
+        }, {
+          "in" : "body",
+          "name" : "section",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/section"
+          }
+        }, {
+          "in" : "body",
+          "name" : "rollId",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/rollId"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "item updated"
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          },
+          "403" : {
+            "description" : "Please check your request payload and network connection"
+          }
+        }
+      }
+    },
+    "/student" : {
+      "post" : {
+        "tags" : [ "AddStudent" ],
+        "summary" : "adds a student record",
+        "description" : "Adds an item to the system",
+        "operationId" : "addStudent",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "name",
+          "description" : "Student item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/name"
+          }
+        }, {
+          "in" : "body",
+          "name" : "title",
+          "description" : "Student Title to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/title"
+          }
+        }, {
+          "in" : "body",
+          "name" : "className",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/className"
+          }
+        }, {
+          "in" : "body",
+          "name" : "section",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/section"
+          }
+        }, {
+          "in" : "body",
+          "name" : "rollId",
+          "description" : "Inventory item to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/rollId"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "item created"
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          },
+          "403" : {
+            "description" : "an existing item already exists"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "title" : {
+      "type" : "string",
+      "example" : "Proctor"
+    },
+    "section" : {
+      "type" : "string",
+      "example" : "Jasime"
+    },
+    "rollId" : {
+      "type" : "string",
+      "example" : 12
+    },
+    "className" : {
+      "type" : "string",
+      "example" : "8th"
+    },
+    "name" : {
+      "type" : "string",
+      "example" : "Kema"
+    }
+  }
+}
